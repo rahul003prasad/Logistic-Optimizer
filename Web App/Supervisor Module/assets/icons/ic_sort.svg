@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="65" viewBox="0 0 96 65">
+  <defs>
+    <filter id="Rectangle_1" x="0" y="0" width="96" height="65" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_53" data-name="Group 53" transform="translate(-1192 -514)">
+    <g transform="matrix(1, 0, 0, 1, 1192, 514)" filter="url(#Rectangle_1)">
+      <rect id="Rectangle_1-2" data-name="Rectangle 1" width="78" height="47" rx="5" transform="translate(9 6)" fill="#feede3"/>
+    </g>
+    <path id="Icon_awesome-sort" data-name="Icon awesome-sort" d="M2.338,15.022H13.688a1.146,1.146,0,0,1,.811,1.955L8.824,22.652a1.14,1.14,0,0,1-1.617,0L1.528,16.977A1.146,1.146,0,0,1,2.338,15.022ZM14.5,10.015,8.824,4.34a1.14,1.14,0,0,0-1.617,0L1.528,10.015a1.146,1.146,0,0,0,.811,1.955H13.688A1.146,1.146,0,0,0,14.5,10.015Z" transform="translate(1210.358 530.004)" fill="#fe640f"/>
+    <text id="Sort" transform="translate(1236 549)" fill="#fe640f" font-size="16" font-family="Lato, 'sans-serif'"><tspan x="0" y="0">Sort</tspan></text>
+  </g>
+</svg>

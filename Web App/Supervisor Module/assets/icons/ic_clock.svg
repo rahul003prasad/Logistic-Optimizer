@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="icons8-clock" transform="translate(-11 -11)">
+    <path id="Path_38" data-name="Path 38" d="M35.7,14A21.7,21.7,0,1,0,57.4,35.7,21.7,21.7,0,0,0,35.7,14Z" transform="translate(-1.698 -1.698)" fill="#fff"/>
+    <path id="Path_39" data-name="Path 39" d="M34,57A23,23,0,1,1,57,34,23.04,23.04,0,0,1,34,57Zm0-43.4A20.4,20.4,0,1,0,54.4,34,20.428,20.428,0,0,0,34,13.6Z" transform="translate(0 0)" fill="#444b54"/>
+    <path id="Path_40" data-name="Path 40" d="M74.813,46.226H62.48A1.454,1.454,0,0,1,61,44.746V27.48a1.48,1.48,0,1,1,2.96,0V43.266H74.813a1.48,1.48,0,0,1,0,2.96Z" transform="translate(-29.014 -9.915)" fill="#fe640f"/>
+    <path id="Path_41" data-name="Path 41" d="M60.038,57a3.038,3.038,0,1,0,3.038,3.038A3.038,3.038,0,0,0,60.038,57Z" transform="translate(-26.038 -26.038)" fill="#fff"/>
+    <path id="Path_42" data-name="Path 42" d="M58.933,63.866a4.933,4.933,0,1,1,4.933-4.933A4.948,4.948,0,0,1,58.933,63.866Zm0-6.906a1.973,1.973,0,1,0,1.973,1.973A1.979,1.979,0,0,0,58.933,56.96Z" transform="translate(-25.467 -24.102)" fill="#fe640f"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="116" height="83" viewBox="0 0 116 83">
+  <rect id="Rectangle_4" data-name="Rectangle 4" width="116" height="83" rx="10" fill="#feede3" opacity="0"/>
+  <g id="Group_10" data-name="Group 10" transform="translate(-480.904 -167.23)">
+    <text id="Future_Tasks" data-name="Future Tasks" transform="translate(497.904 231.23)" fill="#707070" font-size="16" font-family="Lato, 'sans-serif'"><tspan x="0" y="0">Future Tasks</tspan></text>
+    <g id="Group_16" data-name="Group 16">
+      <path id="icons8-future" d="M23.033,5.98V2.145a1.59,1.59,0,1,0-3.18,0v.868a12.166,12.166,0,1,0,3.18,2.967ZM13.252,24.359a11.132,11.132,0,1,1,7.661-19.2V2.145a.53.53,0,1,1,1.06,0V7.011H17.107a.53.53,0,1,1,0-1.06h3.1a10.066,10.066,0,1,0,3.116,7.276,10.409,10.409,0,0,0-1.1-4.63l.948-.474a11.453,11.453,0,0,1,1.213,5.1A11.144,11.144,0,0,1,13.252,24.359Zm1.06-11.107a1.06,1.06,0,0,1-.039.271l3.595,3.595-.75.75-3.595-3.595a1.055,1.055,0,0,1-.8-1.934V4.771h1.06v7.568A1.054,1.054,0,0,1,14.312,13.252Z" transform="translate(528.189 182.547)" fill="#707070"/>
+    </g>
+  </g>
+</svg>

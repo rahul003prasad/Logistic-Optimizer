@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style1.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Side Navigation -->
+      <div class="side-nav pr-6 pt-8 text-right">
+        <div class="brand-logo">
+          <img
+            src="./assets/icons/brand_logo.png"
+            class="w-24 inline"
+            alt="Haul Logo"
+          />
+        </div>
+        <div class="today-tasks mt-24 flex flex-row">
+          <div class="w-1 bg-orange h-16 rounded ml-auto hidden"></div>
+
+          &nbsp;&nbsp;&nbsp;
+
+          <div class="ml-auto p-2 text-sm rounded-md w-24 navs">
+            <a href="./index.html" class="text-grey">
+              <img
+                src="./assets/icons/ic_today_task_off.svg"
+                class="inline mr-6"
+                alt="Today Tasks"
+              />
+              <br />
+              <b>Today Tasks</b>
+            </a>
+          </div>
+        </div>
+        <div class="future-tasks mt-10 flex flex-row">
+          <div class="w-1 bg-orange h-16 rounded ml-auto"></div>
+
+          &nbsp;&nbsp;&nbsp;
+
+          <div
+            class="p-2 text-sm rounded-md navs text-center w-24"
+            style="background-color: #feeadc"
+          >
+            <a href="./future.html" class="text-orange">
+              <img
+                src="./assets/icons/ic_future_task_icon_on.svg"
+                class="inline"
+                alt="Future Tasks"
+              />
+              <br />
+              <b>Future Tasks</b>
+            </a>
+          </div>
+        </div>
+        <div class="completed-tasks mt-10 flex flex-row">
+          <div class="w-1 bg-orange h-16 rounded ml-auto hidden"></div>
+
+          &nbsp;&nbsp;&nbsp;
+
+          <div class="ml-auto p-2 text-sm rounded-md navs text-center w-24">
+            <a href="./completed.html" class="text-grey">
+              <img
+                src="./assets/icons/ic_completed_task_icon.svg"
+                class="inline"
+                alt="Completed Tasks"
+              />
+              <br />
+              <b>Completed</b>
+            </a>
+          </div>
+        </div>
+        <div class="rejected-tasks mt-10 flex flex-row">
+          <div class="w-1 bg-orange h-16 rounded ml-auto hidden"></div>
+
+          &nbsp;&nbsp;&nbsp;
+
+          <div class="ml-auto p-2 text-sm rounded-md navs text-center w-24">
+            <a href="./rejected.html" class="text-grey">
+              <img
+                src="./assets/icons/ic_rejected_task_icon.svg"
+                class="inline"
+                alt="Rejected Tasks"
+              />
+              <br />
+              <b>Rejected</b>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Side navigation -->
+
+      <!-- Middle View - Dashboard -->
+      <div class="dashboard-view">
+        <div
+          class="search-notification"
+          style="margin-left: 30px; margin-right: 30px"
+        >
+          <img
+            src="./assets/icons/search_icon.png"
+            alt="search-icon"
+            class="inline pt-3 pl-2"
+            style="position: absolute"
+          />
+          <input
+            type="text"
+            name="search-bar"
+            placeholder="Search your vehicle number, parcel, driver name, ..."
+          />
+          <a class="ml-3" style="position: relative">
+            <img
+              src="./assets/icons/ic_notification.svg"
+              alt="notification"
+              class="inline"
+              style="verticle-align: middle"
+            />
+            Notification <span class="badge">4</span>
+          </a>
+        </div>
+
+        <!-- welcome view -->
+
+        <div
+          class="welcome-view mt-12"
+          style="margin-left: 30px; margin-right: 30px"
+        >
+          <div class="parcel-tracker">
+            <h2 class="text-grey text-2xl font-black">
+              Welcome Back, <span class="text-orange">Supervisor!</span>
+            </h2>
+
+            <div class="parcel-search text-white py-16 px-6 mt-4">
+              <p class="font-bold">
+                Enter your parcel number <br />
+                to track your deliveries
+              </p>
+              <input
+                type="text"
+                class="text-xs w-auto text-grey px-4 py-3 mt-4 rounded-lg"
+                style="width: 70%"
+                placeholder="Enter parcel number here"
+              />
+              <button
+                class="ml-2 font-bold rounded-lg px-4"
+                style="
+                  background: #ff3434;
+                  padding-top: 0.6rem;
+                  padding-bottom: 0.7rem;
+                "
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+
+          <div class="driver-details p-6 bg-white">
+            <div class="date-time flex flex-row">
+              <div class="time text-xl font-bold">
+                <img
+                  src="./assets/icons/ic_clock.svg"
+                  style="verticle-align: middle"
+                  class="inline mr-1"
+                  alt="clock"
+                  id="clock"
+                />
+              </div>
+
+              <div class="date ml-auto text-sm font-bold">
+                <img
+                  src="./assets/icons/ic_calendar.svg"
+                  class="inline"
+                  alt="ic_calendar"
+                  id="date"
+                />
+              </div>
+            </div>
+
+            <div class="driver flex flex-row mt-6 justify-end">
+              <div class="driver-name text-right">
+                <p class="text-grey text-sm">Supervisor</p>
+                <p
+                  class="text-2xl font-bold"
+                  style="color: #212121"
+                  id="nme"
+                ></p>
+                <img src="./assets/icons/ic_settings.svg" class="inline" />
+              </div>
+              <img class="photo ml-3" src="./assets/icons/bill.jpeg" class="" />
+            </div>
+
+            <div class="location text-center mt-6">
+              <p class="font-bold" style="color: #212121">
+                <img
+                  class="inline"
+                  src="./assets/icons/ic_location_marker.svg"
+                  class=""
+                  alt="location-icon"
+                />
+                Warehouse, Gurgaon
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- welcome view -->
+
+        <!-- total vehicles -->
+
+        <div
+          class="flex flex-row mt-12"
+          style="margin-left: 30px; margin-right: 30px"
+        >
+          <p class="text-2xl font-black text-grey">Your Vehicles</p>
+          <p
+            class="ml-auto text-md pt-1 px-4 rounded-full"
+            style="color: #212121; border: 1px solid #212121"
+          >
+            Total Count: <span class="font-bold"> 10 </span>
+          </p>
+        </div>
+
+        <div class="vehicle-details mt-8 pl-3">
+          <!-- total vehicles -->
+          <!-- Confirmation of load -->
+          <div class="absolute bg-orange load-popup pt-6 hidden text-white">
+            <p class="">
+              <span class="font-bold">Vehicle :-</span> RJ-02-GB-3344
+            </p>
+            <br />
+            <p class="">
+              <span class="font-bold">ETA :-</span> 19/06/2020 @ 10:00 AM
+            </p>
+            <p class="">
+              <span class="font-bold">Unloading :-</span> start @ 10:25 AM
+            </p>
+            <p class="">
+              <span class="font-bold">Loading :-</span> start @ 12:00 PM
+            </p>
+
+            <br />
+            <br />
+
+            <p>Do you confirm the availability of load ?</p>
+            <br />
+            <p class="text-white bg-black py-1 px-2 w-32 rounded-full m-auto">
+              Load Status
+            </p>
+            <br />
+            <table class="table-fixed text-xs m-auto status-table">
+              <thead>
+                <tr>
+                  <th class="px-3 py-2 text-white">Date</th>
+                  <th class="px-3 py-2 text-white">Commodity</th>
+                  <th class="px-3 py-2 text-white">Quantity</th>
+                  <th class="px-3 py-2 text-white">Destination</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="px-3 py-2">20.06.20</td>
+                  <td class="px-3 py-2">SPLIT AC</td>
+                  <td class="px-3 py-2">64</td>
+                  <td class="px-3 py-2">GURGAON</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="flex flex-row justify-center space-x-8 mt-12">
+              <p
+                class="bg-black text-white px-3 py-2 rounded-md pointer"
+                id="load-yes"
+              >
+                Yes
+              </p>
+              <p
+                class="bg-black text-white px-3 py-2 rounded-md pointer"
+                id="load-no"
+              >
+                No
+              </p>
+            </div>
+          </div>
+          <!-- Confirmation of load -->
+
+          <!-- Confirmation to bypass SUPERVISOR -->
+          <div class="absolute bg-orange bypass bypass-popup pt-48 hidden">
+            <p class="text-white">
+              Are you sure, you want to bypass the supervisor
+            </p>
+            <br />
+            <div class="flex flex-row justify-center space-x-8">
+              <p
+                class="bg-black text-white px-3 py-2 rounded-md pointer"
+                id="bypass-yes"
+              >
+                Yes
+              </p>
+              <p
+                class="bg-black text-white px-3 py-2 rounded-md pointer"
+                id="bypass-no"
+              >
+                No
+              </p>
+            </div>
+          </div>
+          <!-- popup to ask for reason -->
+          <div
+            class="absolute bg-orange bypass bypass-reason-popup pt-48 hidden text-center"
+          >
+            <p class="text-white">Please enter the reason for bypass</p>
+            <br />
+            <input
+              type="text"
+              name=""
+              value=""
+              class="bypass-reason-input w-64"
+            />
+            <br />
+            <p
+              class="bg-black m-auto text-white px-3 py-2 rounded-md pointer w-12 text-center"
+              id="bypass-ok"
+            >
+              OK
+            </p>
+          </div>
+          <!-- Confirmation to bypass SUPERVISOR -->
+          <!-- Vehicle 1 Data -->
+
+          <div class="grid grid-cols-8 gap-3 pl-8">
+            <div class="h-8">
+              <p class="bg-black text-white p-1 py-2 rounded-md text-center">
+                RJ 02 GB 4327
+              </p>
+            </div>
+
+            <div class="progress-bar col-span-4 h-8 relative">
+              <div class="progress-bar w-full h-3 bg-grey rounded-full mt-3">
+                <!-- increase the width of this bar to increase progress -->
+                <div class="progress bg-green w-0 h-3 rounded-full"></div>
+              </div>
+
+              <div class="arrival-info text-small absolute top-0 text-center">
+                <p>Arrival</p>
+                <p>9:30 AM</p>
+                <div
+                  class="bg-white h-6 w-6 rounded-full m-auto mt-2 dot"
+                ></div>
+              </div>
+
+              <div class="unloading-info text-small absolute top-0 text-center">
+                <p>Unloading</p>
+                <p>10:30 AM</p>
+                <div
+                  class="bg-white h-6 w-6 rounded-full m-auto mt-2 dot"
+                ></div>
+              </div>
+
+              <div class="loading-info text-small absolute top-0 text-center">
+                <p>Loading</p>
+                <p>12:30 AM</p>
+                <div
+                  class="bg-white h-6 w-6 rounded-full m-auto mt-2 dot"
+                ></div>
+              </div>
+
+              <div class="departure-info text-small absolute top-0 text-center">
+                <p>Departure</p>
+                <p>01:30 AM</p>
+                <div
+                  class="bg-white h-6 w-6 rounded-full m-auto mt-2 dot"
+                ></div>
+              </div>
+            </div>
+
+            <div class="confirmed-btn h-8" id="confirmed-btn">
+              <p
+                class="bg-black text-white p-1 py-2 rounded-md pointer text-center"
+              >
+                CONFIRMED
+              </p>
+            </div>
+
+            <div class="done-btn h-8" id="bypass-btn">
+              <p
+                class="bg-black text-white p-1 py-2 w-48 rounded-md pointer text-center"
+              >
+                DONE BY SUPERVISOR
+              </p>
+            </div>
+          </div>
+
+          <!-- Vehicle 1 Data -->
+
+          <!-- Vehicle 2 Data -->
+
+          <div class="grid grid-cols-8 gap-3 pl-8">
+            <div class="h-8">
+              <p class="bg-black text-white p-1 py-2 rounded-md text-center">
+                RJ 02 GB 4327
+              </p>
+            </div>
+
+            <div class="progress-bar col-span-4 h-8 relative">
+              <div class="progress-bar w-full h-3 bg-grey rounded-full mt-3">
+                <!-- increase the width of this bar to increase progress -->
+                <div class="progress bg-green w-0 h-3 rounded-full"></div>
+              </div>
+
+              <div class="arrival-info text-small absolute top-0 text-center">
+                <p>Arrival</p>
+                <p>9:30 AM</p>
+                <div
+                  class="bg-white h-6 w-6 rounded-full m-auto mt-2 dot"
+                ></div>
+              </div>
+
+              <div class="unloading-info text-small absolute top-0 text-center">
+                <p>Unloading</p>
+                <p>10:30 AM</p>
+                <div
+                  class="bg-white h-6 w-6 rounded-full m-auto mt-2 dot"
+                ></div>
+              </div>
+
+              <div class="loading-info text-small absolute top-0 text-center">
+                <p>Loading</p>
+                <p>12:30 AM</p>
+                <div
+                  class="bg-white h-6 w-6 rounded-full m-auto mt-2 dot"
+                ></div>
+              </div>
+
+              <div class="departure-info text-small absolute top-0 text-center">
+                <p>Departure</p>
+                <p>01:30 AM</p>
+                <div
+                  class="bg-white h-6 w-6 rounded-full m-auto mt-2 dot"
+                ></div>
+              </div>
+            </div>
+
+            <div class="confirmed-btn h-8" id="confirmed-btn">
+              <p
+                class="bg-black text-white p-1 py-2 rounded-md pointer text-center"
+              >
+                CONFIRMED
+              </p>
+            </div>
+
+            <div class="done-btn h-8" id="bypass-btn">
+              <p
+                class="bg-black text-white p-1 py-2 w-48 rounded-md pointer text-center"
+              >
+                DONE BY SUPERVISOR
+              </p>
+            </div>
+          </div>
+
+          <!-- Vehicle 2 Data -->
+        </div>
+      </div>
+      <!-- Middle View - Dashboard -->
+
+      <!-- Vehicle Information -->
+
+      <div class="vehicle-information">
+        <div class="vehicle-info pt-12 pl-8">
+          <h1 class="text-md font-extrabold">Superviser Information</h1>
+          <div class="flex flex-row mt-6">
+            <img src="./assets/icons/truck.svg" alt="truck-logo" />
+            <div class="ml-4">
+              <p class="">Tata Truck, Model A</p>
+              <div class="mt-2" style="position: relative">
+                <img
+                  src="./assets/icons/number_plate.svg"
+                  class="w-40"
+                  alt="truck number"
+                />
+                <p class="number-plate text-md text-black font-bold -ml-3">
+                  RJ 02 GB 2222
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Driver Info Card -->
+        <div
+          class="driver-information shadow bg-white rounded-lg ml-4 -mt-20 p-4"
+        >
+          <div class="flex flex-row">
+            <!-- Driver Photo and Name -->
+            <div class="driver flex flex-row">
+              <img
+                src="./assets/icons/bill.jpeg"
+                class="w-12 h-12 rounded-full"
+                alt="driver-photo"
+              />
+              <div class="driver-name ml-2">
+                <p class="text-grey text-sm">Superviser</p>
+                <p class="text-black -mt-1 font-bold">Rakesh Kumar</p>
+              </div>
+            </div>
+            <!-- Driver Photo and Name -->
+
+            <!-- Contact Button -->
+            <div class="ml-auto pt-3">
+              <p
+                class="bg-blue text-white text-sm rounded-full px-3 py-1 font-semibold"
+                style="cursor: pointer"
+              >
+                Contact
+              </p>
+            </div>
+            <!-- Contact Button -->
+          </div>
+
+          <!-- Driver Contact Details -->
+          <div class="flex flex-row mt-6">
+            <!-- Driver Address -->
+            <div class="">
+              <p class="text-grey text-xs">Address</p>
+              <p class="text-black -mt-1 font-bold text-xs">
+                324 Sector, Kerala, India
+              </p>
+            </div>
+            <!-- Driver Address -->
+
+            <!-- Driver Phone Number -->
+            <div class="ml-auto">
+              <p class="text-grey text-xs">Phone</p>
+              <p class="text-black -mt-1 font-bold text-xs">9876543210</p>
+            </div>
+            <!-- Driver Phone Number -->
+          </div>
+          <!-- Driver Contact Details -->
+        </div>
+        <!-- Driver Info Card -->
+
+        <!-- Confirmation for availability of load -->
+
+        <div class="w-350px" id="confirmation-box">
+          <!-- Loading/Unloading Info -->
+          <div class="ml-8 mt-6">
+            <h6 class="text-grey text-sm font-bold">ETA</h6>
+            <p class="text-black font-bold">19/06/20 @ 10:00 AM</p>
+
+            <hr
+              class="bg-grey w-32 mt-2 mb-2"
+              style="border: 1px solid #e5e6ea"
+            />
+
+            <h6 class="text-grey text-sm font-bold">UNLOADING</h6>
+            <p class="text-black font-bold">Starts @ 10:25 AM</p>
+
+            <hr
+              class="bg-grey w-32 mt-2 mb-2"
+              style="border: 1px solid #e5e6ea"
+            />
+
+            <h6 class="text-grey text-sm font-bold">LOADING</h6>
+            <p class="text-black font-bold">Starts @ 12:00 PM</p>
+
+            <hr class="bg-grey w-32 mt-2" style="border: 1px solid #e5e6ea" />
+          </div>
+          <!-- Loading/Unloading Info -->
+
+          <div class="ml-1 mt-3 p-2 text-center w-350px">
+            <p
+              class="-px-1 py-6 rounded-lg text-xs text-grey font-bold"
+              style="border: 1px solid #e5e6ea"
+            >
+              DO YOU CONFIRM THE AVAILABILITY OF LOAD ?
+            </p>
+            <br />
+
+            <!-- Load Status Button -->
+            <button
+              id="load-status-btn"
+              class="bg-black text-xs shadow text-white px-2 py-3 mt-3 rounded-lg text-center w-32 font-black m-auto"
+              style="cursor: pointer"
+            >
+              LOAD &nbsp; STATUS
+            </button>
+            <!-- Load Status Button -->
+            <!-- Hidden Status , will display when user click load status btn-->
+            <div class="mt-8 hidden" id="status-table">
+              <table class="table-fixed text-xs m-auto status-table">
+                <thead>
+                  <tr>
+                    <th class="px-3 py-2">Date</th>
+                    <th class="px-3 py-2">Commodity</th>
+                    <th class="px-3 py-2">Quantity</th>
+                    <th class="px-3 py-2">Destination</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-3 py-2">20.06.20</td>
+                    <td class="px-3 py-2">SPLIT AC</td>
+                    <td class="px-3 py-2">64</td>
+                    <td class="px-3 py-2">GURGAON</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Hidden Status , will display when user click load status btn-->
+
+            <!-- yes/no button -->
+            <div class="flex flex-row mt-3 py-8 px-10">
+              <button
+                class="bg-blue py-1 px-8 rounded-full text-white font-bold pointer shadow"
+                id="yes"
+              >
+                Yes
+              </button>
+              <button
+                class="ml-auto bg-red py-1 px-8 rounded-full text-white font-bold pointer shadow"
+                id="no"
+              >
+                No
+              </button>
+            </div>
+            <!-- yes/no button -->
+          </div>
+        </div>
+
+        <!-- Confirmation for availability of load -->
+
+        <!-- Confirmed Box => this will display when the user clicks the yes button -->
+
+        <div class="hidden w-350px" id="confirmed-box">
+          <!-- Loading/Unloading Info -->
+          <div class="ml-8 mt-6">
+            <h6 class="text-grey text-sm font-bold">ETA</h6>
+            <p class="text-black font-bold">19/06/20 @ 10:00 AM</p>
+
+            <hr
+              class="bg-grey w-32 mt-2 mb-2"
+              style="border: 1px solid #e5e6ea"
+            />
+
+            <h6 class="text-grey text-sm font-bold">UNLOADING</h6>
+            <p class="text-black font-bold">Starts @ 10:25 AM</p>
+            <p class="text-black font-bold">Ends @ 12:00 PM</p>
+
+            <hr
+              class="bg-grey w-32 mt-2 mb-2"
+              style="border: 1px solid #e5e6ea"
+            />
+
+            <h6 class="text-grey text-sm font-bold">LOADING</h6>
+            <p class="text-black font-bold">Starts @ 12:00 PM</p>
+            <p class="text-black font-bold">Ends @ 13:15 PM</p>
+
+            <hr class="bg-grey w-32 mt-2" style="border: 1px solid #e5e6ea" />
+
+            <br />
+
+            <p
+              class="p-2 px-4 rounded-lg text-sm w-64 text-grey font-bold"
+              style="border: 2px solid #e5e6ea"
+            >
+              Vehicle leaves the warehouse LW1
+              <span class="text-black"> @ 13:40 PM </span>
+            </p>
+
+            <br />
+
+            <button
+              class="bg-blue py-2 px-8 ml-40 rounded-full text-sm text-white font-bold pointer shadow"
+            >
+              DONE
+            </button>
+          </div>
+          <!-- Loading/Unloading Info -->
+        </div>
+
+        <!-- Confirmed Box => this will display when the user clicks the yes button -->
+
+        <!-- rejected message box => this will be displayed when user click no button in confirmation box-->
+
+        <div id="rejected-message-box" class="mt-8 ml-2 p-4 hidden w-350px">
+          <p class="text-grey text-sm font-bold">
+            Oops ! We were sure of picking up AA Tons of commodity xxx to be
+            transported to Warehouse MW3 on 19.06.20
+          </p>
+          <br />
+          <p class="text-black text-sm font-bold">
+            Please mention the reason for unavailibility of load
+          </p>
+
+          <textarea
+            name="rejection-message"
+            rows="4"
+            cols="30"
+            class="textarea text-sm"
+          >
+                         MW3 did not indent the load on time. We will recieve commodity xxx on 21.06.20
+                     </textarea
+          >
+
+          <button
+            class="bg-blue py-2 px-8 ml-48 mt-10 rounded-full text-sm text-white font-bold pointer shadow"
+            id="submit-message"
+          >
+            Submit
+          </button>
+        </div>
+
+        <!-- rejected message box => this will be displayed when user click no button in confirmation box-->
+
+        <!-- rejection box => this will be displayed when user submits the message for rejection of load in rejection-message box -->
+
+        <div id="rejection-box" class="hidden w-350px">
+          <!-- Loading/Unloading Info -->
+          <div class="ml-8 mt-6 pr-6">
+            <p
+              class="text-lg font-black bg-red text-white py-2 w-12 pl-2 rounded-md"
+            >
+              NA
+            </p>
+
+            <br />
+
+            <h6 class="text-grey text-sm font-bold">ETA</h6>
+            <p class="text-black font-bold">19/06/20 @ 10:00 AM</p>
+
+            <hr
+              class="bg-grey w-32 mt-2 mb-2"
+              style="border: 1px solid #e5e6ea"
+            />
+
+            <h6 class="text-grey text-sm font-bold">UNLOADING</h6>
+            <p class="text-black font-bold">Starts @ 10:25 AM</p>
+            <p class="text-black font-bold">Ends @ 12:00 PM</p>
+
+            <hr
+              class="bg-grey w-32 mt-2 mb-2"
+              style="border: 1px solid #e5e6ea"
+            />
+
+            <br />
+
+            <p class="text-black text-sm font-bold">
+              Vehicle leaves the Warehouse @ 13:10 PM because
+            </p>
+
+            <br />
+
+            <p
+              class="text-grey text-sm px-3 py-2 font-bold rounded-md"
+              style="border: 1px solid #999"
+            >
+              MW3 did not indent the load on time. We will recieve commodity xxx
+              on 21.06.20
+            </p>
+
+            <br />
+
+            <button
+              class="bg-blue py-2 px-8 ml-48 rounded-full text-sm text-white font-bold pointer shadow"
+            >
+              OKAY
+            </button>
+          </div>
+          <!-- Loading/Unloading Info -->
+        </div>
+
+        <!-- rejection box => this will be displayed when user submits the message for rejection of load in rejection-message box -->
+      </div>
+      <!-- Vehicle Information -->
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/app1.js"></script>
+  </body>
+</html>

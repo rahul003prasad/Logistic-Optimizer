@@ -1,0 +1,228 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: .5fr 3fr 1fr;
+}
+
+.navs:hover {
+    background-color: #FEEADC;
+}
+
+.navbar {
+}
+
+.dashboard-view {
+    background-color: #fafafa;
+}
+
+
+
+.search-notification {
+    margin-top: 30px;
+}
+
+.search-notification input{
+    width: 80%;
+    padding: 15px 15px 15px 40px;
+    border: 1px solid #FEEADC;
+    border-radius: 5px;
+    font-size:14px;
+    font-weight: bold;
+    color: #999;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.search-notification a {
+    background-color: #fff;
+    border: 1px solid #ff7f34;
+    padding: 18px;
+    border-radius: 5px;
+    color: #ff7f34;
+    font-size: 12px;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.welcome-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.parcel-tracker {
+}
+
+.parcel-search {
+    background: url('../icons/search_parcel_card_bg.png') center center no-repeat;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.driver-details {
+    height: 275px;
+    max-width: 100%;
+    border: 14px solid #FEEADC;
+    border-radius: 14px;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.driver .photo {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+.number-plate {
+    position: absolute;
+    top:50%;
+    left:25%;
+    transform: translate(0, -50%);
+}
+
+.vehicle-info {
+    background-color: #FEEADC;
+    width: 350px;
+    height: 300px;
+    color: #707070;
+    letter-spacing: 1px;
+}
+
+.vehicle-info-card-active {
+    background: white;
+    border: 2px solid #ff7f34;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.vehicle-info-card {
+
+}
+
+.vehicle-info-card:hover {
+    background: white;
+    border: 2px solid #ff7f34;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+}
+
+.driver-information {
+    width: 320px;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: #ff7f34;
+    color: white;
+}
+
+.vehicles:hover {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.vehicles {
+    position: relative;
+}
+
+.status-table th {
+    background-color: #212121;
+    color: #fff;
+    border: 1px solid #999;
+}
+
+.status-table td {
+    border: 1px solid #999;
+}
+
+.textarea {
+    border: 1px solid #999;
+    margin-top: 15px;
+    padding: 10px;
+    color: #707070;
+}
+
+.text-orange {
+    color: #fe640f;
+}
+
+.border-orange {
+    border: 1px solid #ff7f34;
+}
+
+.left-orange-border {
+    border-left: 4px solid #fe640f;
+    border-radius: 2px;
+}
+
+.w-350px {
+    width: 350px;
+}
+
+.heading p {
+    padding-top: 10px;
+}
+
+.text-grey {
+    color: #707070;
+}
+
+.text-black {
+    color: #212121;
+}
+
+.circle {
+    border: 5px solid #e5e6ea;
+}
+
+.bg-black {
+    background-color: #212121;
+}
+
+.bg-red {
+    background-color: #ff3434;
+}
+
+.bg-blue {
+    background-color: #348AFF;
+}
+
+.bg-orange {
+    background-color: #ff7f34;
+}
+
+.bg-green {
+    background-color: #34d677;
+}
+
+.bg-gray {
+    background: #e5e6ea;
+}
+
+.border-gray {
+    border: 4px solid #e5e6ea;
+}
+
+.shadow {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pointer {
+    cursor: pointer;
+}
