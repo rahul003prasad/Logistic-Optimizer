@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" integrity="sha512-SUJFImtiT87gVCOXl3aGC00zfDl6ggYAw5+oheJvRJ8KBXZrr/TMISSdVJ5bBarbQDRC2pR5Kto3xTR0kpZInA==" crossorigin="anonymous" />
+    <title>Cluster Warehouse Reporting</title>
+  </head>
+  <style>
+      #graph-nav{
+        background-color: whitesmoke;
+      }
+      .nav-link:hover{
+          background-color: lime;
+      }
+  </style>
+  <body>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg==" crossorigin="anonymous"></script>
+
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="alert alert-info bg-primary text-white">Warehouse Name</div>
+                <table>
+                  <tr><td>From: <b id="d_from"></b></td><td>To: <b id="d_to"></b></td></tr>
+                  <tr><td colspan="2">Cluster: <b id="cluster"></b></td></tr>
+                  <tr><td colspan="2">Warehouse: <b id="warehouse"></b></td></tr>
+                </table>
+            </div>
+            <div class="col-md-9">
+                <center>
+                    <div class="alert alert-warning bg-warning text-white"><h3>Cluster Warehouse Reporting</h3></div>
+                </center>
+            </div>
+        </div>
+
+        <div class="row mt-5 border border-secondary">
+            <div class="col-3" id='graph-nav'>
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active graph-menu" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Warehouse In (tons)</a>
+                <a class="nav-link graph-menu" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Warehouse Out (tons)</a>
+                <a class="nav-link graph-menu" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Total Loading Time</a>
+                <a class="nav-link graph-menu" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Total Expected Loading Time</a>
+                <a class="nav-link graph-menu" id="v-pills-settings2-tab" data-toggle="pill" href="#v-pills-settings2" role="tab" aria-controls="v-pills-settings2" aria-selected="false">Difference</a>
+                <a class="nav-link graph-menu" id="v-pills-settings3-tab" data-toggle="pill" href="#v-pills-settings3" role="tab" aria-controls="v-pills-settings3" aria-selected="false">Total Unloading Time</a>
+                <a class="nav-link graph-menu" id="v-pills-settings4-tab" data-toggle="pill" href="#v-pills-settings4" role="tab" aria-controls="v-pills-settings4" aria-selected="false">Total Expected Unloading Time</a>
+                <a class="nav-link graph-menu" id="v-pills-settings5-tab" data-toggle="pill" href="#v-pills-settings5" role="tab" aria-controls="v-pills-settings5" aria-selected="false">Difference</a>
+                <a class="nav-link graph-menu" id="v-pills-settings6-tab" data-toggle="pill" href="#v-pills-settings6" role="tab" aria-controls="v-pills-settings6" aria-selected="false">Vehicle Idle Time</a>
+                <a class="nav-link graph-menu" id="v-pills-settings7-tab" data-toggle="pill" href="#v-pills-settings7" role="tab" aria-controls="v-pills-settings7" aria-selected="false">Vehicle Idle Cost</a>
+                <a class="nav-link graph-menu" id="v-pills-settings8-tab" data-toggle="pill" href="#v-pills-settings8" role="tab" aria-controls="v-pills-settings8" aria-selected="false">Actual Response Time of Supervisor</a>
+                <a class="nav-link graph-menu" id="v-pills-settings9-tab" data-toggle="pill" href="#v-pills-settings9" role="tab" aria-controls="v-pills-settings9" aria-selected="false">Estd. Response Time of Supervisor</a>
+                <a class="nav-link graph-menu" id="v-pills-settings10-tab" data-toggle="pill" href="#v-pills-settings19" role="tab" aria-controls="v-pills-settings10" aria-selected="false">Number of escalation</a>
+
+
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <canvas id="myChart1" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <canvas id="myChart2" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <canvas id="myChart3" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <canvas id="myChart4" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings1" role="tabpanel" aria-labelledby="v-pills-settings1-tab">
+                    <canvas id="myChart5" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings2" role="tabpanel" aria-labelledby="v-pills-settings2-tab">
+                    <canvas id="myChart6" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings3" role="tabpanel" aria-labelledby="v-pills-settings3-tab">
+                    <canvas id="myChart7" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings4" role="tabpanel" aria-labelledby="v-pills-settings4-tab">
+                    <canvas id="myChart8" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings5" role="tabpanel" aria-labelledby="v-pills-settings5-tab">
+                    <canvas id="myChart9" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings6" role="tabpanel" aria-labelledby="v-pills-settings6-tab">
+                    <canvas id="myChart10" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings7" role="tabpanel" aria-labelledby="v-pills-settings7-tab">
+                    <canvas id="myChart11" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings8" role="tabpanel" aria-labelledby="v-pills-settings8-tab">
+                    <canvas id="myChart12" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings9" role="tabpanel" aria-labelledby="v-pills-settings9-tab">
+                    <canvas id="myChart13" style=width:100%></canvas>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings10" role="tabpanel" aria-labelledby="v-pills-settings10-tab">
+                    <canvas id="myChart14" style=width:100%></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+<br><br><br>
+    </div>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div style="max-width:52rem;" class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Reporting Date Range</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <h3>Select Date Range</h3><br>
+          <center>
+          <form style="place-content: center;" class="form-inline">
+            <div style="display: block;">
+            <div style="display: flex;">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">From</label>
+                  <input type="date" class="form-control" name="from" id="from-date">
+                  <label class="my-1 ml-5 mr-2" for="inlineFormCustomSelectPref">To</label>
+                  <input type="date" class="form-control" name="to" id="to-date">
+           </div>
+           <label class="mt-3 my-1 mr-2" >Select Warehouse</label>
+            <select class="form-control" name="select-warehouse" id="select-warehouse">
+                <option value="saket">Saket</option>
+                <option value="faridabad">Faridabad</option>
+                <option value="ChandniChowk">Chandni Chowk</option>
+                <option value="Pitampura">Pitampura</option>   
+            </select>
+            <label class="mt-3 my-1 mr-2" >Select Cluster</label>
+            <select class="form-control" name="select-cluster" id="select-cluster">
+                <option value="cluster1">Cluster-1</option>
+                <option value="cluster2">Cluster-2</option>
+                <option value="cluster3">Cluster-3</option>
+                <option value="cluster4">Cluster-4</option>   
+            </select>
+          </div><!--block content-->
+          <br>
+          
+          </div>
+          </form>
+          <button type="button" onclick="setDateRange()" class="btn btn-primary" data-dismiss="modal">Set Date</button>
+          </center>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    <script>
+        
+        //var ctx = document.getElementById('myChart'+);
+        //var ctx = document.getElementById('myChart').getContext('2d');
+        var startdate, enddate;
+
+        function randomDate(date1, date2)
+        {
+            function randomValueBetween(min, max) {
+            return Math.random() * (max - min) + min;
+            }
+            var date1 = date1 || '01-01-1970'
+            var date2 = date2 || new Date().toLocaleDateString()
+            date1 = new Date(date1).getTime()
+            date2 = new Date(date2).getTime()
+            if( date1>date2){
+                return new Date(randomValueBetween(date2,date1)).toLocaleDateString()   
+            } else{
+                return new Date(randomValueBetween(date1, date2)).toLocaleDateString()  
+
+            }
+        }
+        
+        function initGraphs(){
+            var ctx = 'myChart';
+        var menuList = $('.graph-menu');
+        var y_labels = ['tons','tons','minutes', 'minutes','units','minutes', 'minutes','units', 'minutes', 'per 1000 Rupees','units', 'minutes','minutes','units'];
+        var MONTHS = [randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate),
+        randomDate(startdate,enddate)];
+        
+        var config;
+            for(var i=0;i<13;i++)
+            {
+                let DATA = [Math.floor(Math.random*1000), 
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000),
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000), 
+                Math.floor(Math.random()*1000) ];
+                console.log(DATA);
+                config = {
+			type: 'line',
+			data: {
+				labels: MONTHS,
+				datasets: [{
+					label: 'Clusters',
+					backgroundColor: 'rgba(215, 199, 132)',
+					borderColor: 'rgba(215, 199, 132)',
+					data: DATA,
+					fill: false,
+				}]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: menuList[i].innerHTML
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: y_labels[i]
+						}
+					}]
+				}
+			}
+        };
+        let ctx = document.getElementById('myChart'+String(i+1));
+        //var ctx = $('#myChart'+String(i+1));
+		let myLine = new Chart(ctx, config);
+            }
+        }
+
+
+        function setDateRange()
+        {
+            startdate = String(document.getElementById('from-date').value);
+            enddate = String(document.getElementById('to-date').value);
+            let cluster = String(document.getElementById('select-cluster').value);
+            let warehouse = String(document.getElementById('select-warehouse').value);
+            document.getElementById('d_from').innerHTML=startdate;
+            document.getElementById('d_to').innerHTML=enddate;
+            document.getElementById('cluster').innerHTML=cluster;
+            document.getElementById('warehouse').innerHTML=warehouse;
+            initGraphs();
+        }
+
+        window.onload = function() {
+
+            $('#staticBackdrop').modal('show');
+			
+		};
+    </script>
+  </body>
+</html>
