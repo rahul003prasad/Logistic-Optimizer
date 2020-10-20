@@ -18,8 +18,12 @@
       .nav-link:hover{
           background-color: lime;
       }
+        .containers{
+        margin-left:50px;
+        margin-right:50px;
+      }
   </style>
-  <body>
+  <body style="background: rgb(186,154,4);background: linear-gradient(90deg, rgba(186,154,4,1) 0%, rgba(249,144,83,1) 61%);">
     
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -30,7 +34,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg==" crossorigin="anonymous"></script>
 
     
-    <div class="container mt-5">
+    <div class="containers mt-5">
+     <div class="card shadow border border-secondary p-3 bg-white">
         <div class="row">
             <div class="col-md-3">
                 <div class="alert alert-info bg-primary text-white">Warehouse Name</div>
@@ -45,8 +50,9 @@
                 </center>
             </div>
         </div>
+      </div>
 
-        <div class="row mt-5 border border-secondary">
+        <div class="row mt-5 border border-secondary bg-white p-3">
             <div class="col-3" id='graph-nav'>
               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active graph-menu" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">No. Of Loops</a>
