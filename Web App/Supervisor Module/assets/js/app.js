@@ -74,7 +74,7 @@ function init() {
                         Vehicle ${key}
                     </div>
                     <div class="relative pt-2">
-                        <img src="./assets/icons/number_plate.svg" class="w-40 inline" alt="number_plate">
+                        <!--img src="./assets/icons/number_plate.svg" class="w-40 inline" alt="number_plate"-->
                         <p class=" number-plate text-black">${value.number} </p>
                     </div>
                     <div class="pt-4 text-center">
@@ -88,85 +88,7 @@ function init() {
                     </div>
 
 
-                    <div class="col-span-5 mt-6 horizontal-progress-bar flex flex-row  hidden text-left"
-                        id="vehicle-horizontal-progress">
-
-                        <!-- ARRIVAL MARK -->
-                        <div class="arrival flex flex-row flex-no-wrap">
-                            <span class="circle w-6 h-6 rounded-full bg-white inline-block flex-none"></span>
-                            <p class="text-black ml-2 text-sm flex-none">
-                                ARRIVAL
-                                <br>
-                                <span class="text-grey text-xs">Location A, Noida</span>
-                                <br>
-                                <span class="text-black text-xs -mt-3">7 July, 9:30 AM</span>
-                            </p>
-                        </div>
-                        <!-- arrival progress bar -->
-                        <div class="w-24 h-2 rounded-full bg-gray mt-2 relative -ml-6">
-                            <!-- increase the width of this div to increase progress -->
-                            <div class="absolute top-0 left-0  h-2 bg-green rounded-full">
-
-                            </div>
-                        </div>
-                        <!-- arrival progress bar -->
-                        <!-- ARRIVAL MARK -->
-
-
-                        <!-- UNLOADING MARK -->
-                        <div class="unloading flex flex-row ml-4 flex-no-wrap -ml-1">
-                            <span class="circle w-6 h-6 rounded-full bg-white inline-block flex-none"></span>
-                            <p class="text-black ml-2 text-sm flex-none">
-                                UNLOADING
-                                <br>
-                                <span class="text-grey text-xs">Location B, Noida</span>
-                                <br>
-                                <span class="text-black text-xs -mt-3">7 July, 11:30 AM</span>
-                            </p>
-                        </div>
-                        <!-- unloading progress bar -->
-                        <div class="w-24 h-2 rounded-full bg-gray mt-2 relative">
-                            <!-- increase the width of this div to increase progress -->
-                            <div class="absolute top-0 left-0  h-2 bg-green rounded-full">
-
-                            </div>
-                        </div>
-                        <!-- unloading progress bar -->
-                        <!-- UNLOADING MARK -->
-
-
-                        <!-- LOADING MARK -->
-                        <div class="arrival flex flex-row  ml-4 flex-no-wrap -ml-1">
-                            <span class="circle w-6 h-6 rounded-full bg-white inline-block flex-none"></span>
-                            <p class="text-black ml-2 text-sm flex-none">
-                                LOADING
-                                <br>
-                                <span class="text-grey text-xs">Location C, Noida</span>
-                                <br>
-                                <span class="text-black text-xs -mt-3">7 July, 12:30 AM</span>
-                            </p>
-                        </div>
-                        <!-- LOADING progress bar -->
-                        <div class="w-24 h-2 rounded-full bg-gray mt-2 relative -ml-4">
-                            <!-- increase the width of this div to increase progress -->
-                            <div class="absolute top-0 left-0  h-2 bg-green rounded-full">
-
-                            </div>
-                        </div>
-                        <!-- LOADING progress bar -->
-                        <!-- LOADING MARK -->
-
-                        <!-- DEPARTURE MARK -->
-                        <div class="arrival flex flex-row ml-4 flex-no-wrap -ml-1">
-                            <span class="circle w-6 h-6 rounded-full bg-white inline-block flex-none"></span>
-                            <p class="text-black ml-2 text-sm flex-none">
-                                DEPARTURE
-                                <br>
-                                <span class="text-grey text-xs">Location D, Noida</span>
-                                <br>
-                                <span class="text-black text-xs -mt-3">7 July, 1:30 AM</span>
-                            </p>
-                        </div>
+                   
                         <!-- DEPARTURE MARK -->
 
 
@@ -177,3 +99,9 @@ function init() {
         })
     })
 }
+
+
+
+
+
+

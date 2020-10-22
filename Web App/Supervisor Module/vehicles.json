@@ -5,23 +5,23 @@
         "status": "./assets/icons/progress_tag.png"
     },
     "2": {
-        "number": "DL 13S 7817",
+        "number": "HR 1G 1JGD6S",
         "date": "6 Jul 2020",
-        "status": "./assets/icons/progress_tag.png"
+        "status": "./assets/icons/dispatched_tag.png"
     },
     "3": {
-        "number": "DL 13S 7817",
+        "number": "RJ 02 GB 2222",
         "date": "6 Jul 2020",
-        "status": "./assets/icons/progress_tag.png"
+        "status": "./assets/icons/delayed_tag.png"
     },
     "4": {
-        "number": "DL 13S 7817",
+        "number": "HR 1G 1JGD6S",
         "date": "6 Jul 2020",
-        "status": "./assets/icons/progress_tag.png"
+        "status": "./assets/icons/confirmed_tag.svg"
     },
     "5": {
         "number": "DL 13S 7817",
         "date": "6 Jul 2020",
-        "status": "./assets/icons/progress_tag.png"
+        "status": "./assets/icons/delayed_tag.png"
     }
 }

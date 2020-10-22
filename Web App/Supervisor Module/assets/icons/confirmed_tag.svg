@@ -3,5 +3,5 @@
     <rect width="172" height="44" rx="11" stroke="none"/>
     <rect x="0.5" y="0.5" width="171" height="43" rx="10.5" fill="none"/>
   </g>
-  <text id="CONFIRMED" transform="translate(34 28)" fill="#8cc165" font-size="18" font-family="Lato, 'sans-serif'" font-weight="500"><tspan x="0" y="0">CONFIRMED</tspan></text>
+  <text id="CONFIRMED" transform="translate(34 28)" fill="#8cc165" font-size="18" font-family="VisueltPro-Medium, Visuelt Pro" font-weight="500"><tspan x="0" y="0">CONFIRMED</tspan></text>
 </svg>
