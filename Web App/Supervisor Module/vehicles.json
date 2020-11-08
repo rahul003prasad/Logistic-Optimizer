@@ -20,7 +20,12 @@
         "status": "./assets/icons/confirmed_tag.svg"
     },
     "5": {
-        "number": "DL 13S 7817",
+        "number": "HR 29 W 0214",
+        "date": "6 Jul 2020",
+        "status": "./assets/icons/delayed_tag.png"
+    },
+    "6": {
+        "number": "UP 29 W 0214",
         "date": "6 Jul 2020",
         "status": "./assets/icons/delayed_tag.png"
     }
