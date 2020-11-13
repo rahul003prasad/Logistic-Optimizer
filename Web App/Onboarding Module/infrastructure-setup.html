@@ -22,7 +22,7 @@
 }
 
 input{
-    border: 1px solid #9e9e9e !important;
+    /*border: 1px solid #9e9e9e !important;*/
     border-radius: 7px !important;
     padding-left:12px !important;
 }
@@ -39,728 +39,793 @@ fieldset{
 }
 
 .blue-color{
-    color:blue !important;
+    color:orange !important;
 }
 
 .custom-select{
     width:90% !important;
-    border: 1px solid #9e9e9e !important;
-    border-radius: 7px !important;
+    /*border: 1px solid #9e9e9e !important;
+    border-radius: 7px !important;*/
     padding-left:12px !important;
+}
+
+.sidebar{
+  background-color: dimgray;
+    color: white;
+    padding: 4rem;
+    height: 100%;
+    position: fixed;
+}
+
+.nav-wrapper{
+  background-color: black;
+}
+
+.background{
+  overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+.sidenav-list{
+  font-size:19px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  padding-left:20px;
+  cursor:pointer;
+}
+
+.sidenav-list.active{
+  background-color: coral;
+}
+
+.sidenav-list:hover{
+  background-color: grey;
+}
+.btn{
+  background-color: orangered;
+  color:white;
 }
 
  </style>
 
 
-  <body style="background-color: whitesmoke;">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">LOGO</a>
-        <ul class="left hide-on-med-and-down">
-            <li class=""><a href="index.html">Home</a></li>
-          <li class="active"><a href="#">Infrastructural Setup</a></li>
-        </ul>
-      </div>
-    </nav>
-    <br><br><br>
-    <!--container-->
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <center><h4>Infrastructure Setup</h4></center>
-            </div>
-            <div class="card-body  py-5 px-4">
-               <form id="region-form" onsubmit="return continue_region()">
-                 <div class="form-group row">
-                    <label for="company" class="col-sm-2 text-dark col-form-label">No. Of Regions</label>
-                    <div class="col-sm-10">
-                       <input type="number" required min="1" class="form-control-plaintext custom-input" id="no-of-regions" placeholder="Enter No. Of Regions" value="">
-                    </div>
+  <body style="background: rgb(254,234,220); background: linear-gradient(90deg, rgba(254,234,220,1) 0%, rgba(255,182,112,1) 100%);">
+    <div class="row"> 
+      <div class="col-md-3 col s3 sidebar">
+        <div class="background">
+          <img style="width:100%;" src="assets/img/bg.png">
+        </div>
+          <div class="side-nav py-3">
+          <center>
+            <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" style="height:6rem; width:6rem;">
+            <h5>Full Name<br>email@example.com</h5>
+          </center>
+          <br>
+          <ul>
+            <li class="sidenav-list" onclick="window.location.href='organization-profile.html';">Organization Profile</li>
+            <li class="sidenav-list" onclick="window.location.href='industrial-verticals.html';">Industrial Verticals</li>
+            <li class="sidenav-list active">Infrastructure Setup</li>
+            <li class="sidenav-list" onclick="window.location.href='supply-chain.html';">Supply Chain</li>
+          </ul>
+          </div>
+          <!--------SideNav ends------>
+       </div><!--col-md-4-->
+      
+      <div class="col-md-9 col s9">
+        <nav style="margin-left:-16px;">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center"><img src="assets/img/brand_logo.png"></a>
+            <ul class="left hide-on-med-and-down">
+              <li class="active"><a href="index.html">Home</a></li>
+            </ul>
+          </div>
+        </nav>
+          <br><br><br>
+          <!--container-->
+          <div class="container">
+              <div class="card">
+                  <div class="card-header">
+                      <center><h4>Infrastructure Setup</h4></center>
+                  </div>
+                  <div class="card-body  py-5 px-4">
+                    <form id="region-form" onsubmit="return continue_region()">
+                      <div class="form-group row">
+                          <label for="company" class="col-sm-2 text-dark col-form-label">No. Of Regions</label>
+                          <div class="col-sm-10">
+                            <input type="number" required min="1" class="form-control-plaintext custom-input" id="no-of-regions" placeholder="Enter No. Of Regions" value="">
+                          </div>
+                        </div>
+
+                        <fieldset>
+                          <legend class="blue-color">Region Details</legend>
+                          <div class="form-group row">
+                              <label for="company" class="col-sm-2 text-dark col-form-label">Name Of Regions</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control-plaintext custom-input" id="name-of-region" placeholder="Enter Name Of Region" value="" required>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="company" class="col-sm-2 text-dark col-form-label">Region Head Name</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control-plaintext custom-input" id="region-head-name" placeholder="Enter Region Head Name" value="" required>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="company" class="col-sm-2 text-dark col-form-label">Contact Number</label>
+                              <div class="col-sm-10">
+                                <input type="number" class="form-control-plaintext custom-input" id="contact" placeholder="Enter Contact Number" value="" required>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="company" class="col-sm-2 text-dark col-form-label">Email</label>
+                              <div class="col-sm-10">
+                                <input type="email" class="form-control-plaintext custom-input" id="email" placeholder="Enter Email Id" value="" required>
+                              </div>
+                            </div>
+                        </fieldset>
+                        <br>
+                          <center><button class="btn btn-large px-3 pb-5 pt-3"><h5>Continue</h5></button></center>
+                      </form>
+                  </div><!--card-body-->
+              </div><!--card-->
+
+                  <!-----------------------card 2----------------------->
+              <div class="card" id="card-2" style="background-color:white; display:noneg;">
+                  <div class="card-header">
+                      <center><h4>Warehouse Details</h4></center>
+                  </div>
+                  <div class="card-body py-5 px-4">
+                      <form>
+                          <div class="form-group row">
+                              <label for="company" class="col-sm-2 text-dark col-form-label">Select Region No.</label>
+                              <div class="col-sm-10">
+                                <select class="form-control custom-select" id="select-region-no">
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group row" onchange="changenoOfWarehouses()">
+                              <label for="company" class="col-sm-2 text-dark col-form-label">No. Of Warehouse</label>
+                              <div class="col-sm-10">
+                                <input type="number" min="1" class="form-control-plaintext custom-input" id="no-of-warehouse" placeholder="Enter Name Of Region" value="" required>
+                              </div>
+                            </div>
+
+                          <fieldset id="warehouse-details" style="display:none;">
+                            <br><br>
+                              <legend class="blue-color" id="warehouse-num">Warehouse</legend>
+                              <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Warehouse Number</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="warehouse-number" readonly placeholder="Enter Name Of Region" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Warehouse Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="warehouse-name" placeholder="Enter Warehouse Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Loading/Unloading Time</label>
+                                  <div class="col-sm-9">
+                                    <input type="time" class="form-control-plaintext custom-input" id="w-loading-time" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Off Days in month?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-off-days" placeholder="Enter No. Of Off Days" value="" >
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">How many Docking facilities for loading are available?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-docking-facilities" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">What max length of vehicle can enter your warehouse?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-vehicle-length" placeholder="Enter length of vehicle" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Scope of parallel loading/ unloading? If yes then how many parallel loading docking yards are there?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-scope-parallel-loading" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Address/ Geo Cordinates</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-address" placeholder="Address" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">No Entry Time Zone of city</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-no-entry-timezone" placeholder="Enter Time Zone" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Scanning at Inbound?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-scanning-inbound" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-scanning-outbound" class="col-sm-3 text-dark col-form-label">Scanning at Outbound?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-scanning-outbound" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-manager-name" class="col-sm-3 text-dark col-form-label">Manager Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-manager-name" placeholder="Enter Manager Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-manager-email" class="col-sm-3 text-dark col-form-label">Manager email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-manager-email" placeholder="Enter Manager email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-manager-Contact" class="col-sm-3 text-dark col-form-label">Manager Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="w-manager-Contact" placeholder="Enter Manager Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="w-supervisor-1-name" class="col-sm-3 text-dark col-form-label">Supervisor 1 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-supervisor-1-name" placeholder="Enter supervisor-1 Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-supervisor-1-email" class="col-sm-3 text-dark col-form-label">Supervisor 1 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-supervisor-1-email" placeholder="Enter supervisor-1 email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-supervisor-1-Contact" class="col-sm-3 text-dark col-form-label">Supervisor 1 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="w-supervisor-1-Contact" placeholder="Enter supervisor-1 Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="w-supervisor-2-name" class="col-sm-3 text-dark col-form-label">Supervisor 2 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-supervisor-2-name" placeholder="Enter supervisor-2 Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-supervisor-2-email" class="col-sm-3 text-dark col-form-label">Supervisor 2 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-supervisor-2-email" placeholder="Enter supervisor-2 email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-supervisor-2-Contact" class="col-sm-3 text-dark col-form-label">Supervisor 2 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="w-supervisor-2-Contact" placeholder="Enter supervisor-2 Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="w-loading-coordinator-1-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-loading-coordinator-1-name" placeholder="Enter loading-coordinator-1 Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-loading-coordinator-1-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-loading-coordinator-1-email" placeholder="Enter loading-coordinator-1 email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-loading-coordinator-1-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="w-loading-coordinator-1-Contact" placeholder="Enter loading-coordinator-1 Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="w-loading-coordinator-2-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-loading-coordinator-2-name" placeholder="Enter loading-coordinator-2 Name" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-loading-coordinator-2-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="w-loading-coordinator-2-email" placeholder="Enter loading-coordinator-2 email" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="w-loading-coordinator-2-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="w-loading-coordinator-2-Contact" placeholder="Enter loading-coordinator-2 Contact" value="">
+                                  </div>
+                                </div>
+
+                            </fieldset>
+
+
+
+                            <!-----------DC----------->
+                          
+                            <div id="dc-field" style="display: none;" class="mt-5 form-group row" onkeyup="changenoOfDC()">
+                              <label for="company" class="col-sm-2 text-dark col-form-label">No. Of DCs</label>
+                              <div class="col-sm-10">
+                                <input type="number" min="1" class="form-control-plaintext custom-input" id="no-of-dc" placeholder="Enter Name Of Region" value="" required>
+                              </div>
+                            </div>
+
+                          <fieldset id="dc-details" style="display:none;">
+                            <br><br>
+                              <legend class="blue-color" id="dc-num">DC's</legend>
+                              <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">DC Number</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-number" readonly placeholder="Enter Name Of Region" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">DC's Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-name" placeholder="Enter DC's Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-time" class="col-sm-3 text-dark col-form-label">Loading/Unloading Time</label>
+                                  <div class="col-sm-9">
+                                    <input type="time" class="form-control-plaintext custom-input" id="dc-loading-time" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-off-days" class="col-sm-3 text-dark col-form-label">Off Days in month?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-off-days" placeholder="Enter No. Of Off Days" value="" >
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-docking-facilities" class="col-sm-3 text-dark col-form-label">How many Docking facilities for loading are available?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-docking-facilities" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-vehicle-length" class="col-sm-3 text-dark col-form-label">What max length of vehicle can enter your warehouse?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-vehicle-length" placeholder="Enter length of vehicle" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-scope-parallel-loading" class="col-sm-3 text-dark col-form-label">Scope of parallel loading/ unloading? If yes then how many parallel loading docking yards are there?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-scope-parallel-loading" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-address" class="col-sm-3 text-dark col-form-label">Address/ Geo Cordinates</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-address" placeholder="Address" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-no-entry-timezone" class="col-sm-3 text-dark col-form-label">No Entry Time Zone of city</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-no-entry-timezone" placeholder="Enter Time Zone" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-scanning-inbound" class="col-sm-3 text-dark col-form-label">Scanning at Inbound?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-scanning-inbound" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-scanning-outbound" class="col-sm-3 text-dark col-form-label">Scanning at Outbound?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-scanning-outbound" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-manager-name" class="col-sm-3 text-dark col-form-label">Manager Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-manager-name" placeholder="Enter Manager Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-manager-email" class="col-sm-3 text-dark col-form-label">Manager email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-manager-email" placeholder="Enter Manager email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-manager-Contact" class="col-sm-3 text-dark col-form-label">Manager Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="dc-manager-Contact" placeholder="Enter Manager Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="dc-supervisor-1-name" class="col-sm-3 text-dark col-form-label">Supervisor 1 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-supervisor-1-name" placeholder="Enter supervisor-1 Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-supervisor-1-email" class="col-sm-3 text-dark col-form-label">Supervisor 1 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-supervisor-1-email" placeholder="Enter supervisor-1 email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-supervisor-1-Contact" class="col-sm-3 text-dark col-form-label">Supervisor 1 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="dc-supervisor-1-Contact" placeholder="Enter supervisor-1 Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="dc-supervisor-2-name" class="col-sm-3 text-dark col-form-label">Supervisor 2 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-supervisor-2-name" placeholder="Enter supervisor-2 Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-supervisor-2-email" class="col-sm-3 text-dark col-form-label">Supervisor 2 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-supervisor-2-email" placeholder="Enter supervisor-2 email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-supervisor-2-Contact" class="col-sm-3 text-dark col-form-label">Supervisor 2 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="dc-supervisor-2-Contact" placeholder="Enter supervisor-2 Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-1-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-name" placeholder="Enter loading-coordinator-1 Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-1-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-email" placeholder="Enter loading-coordinator-1 email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-1-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-Contact" placeholder="Enter loading-coordinator-1 Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-2-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-name" placeholder="Enter loading-coordinator-2 Name" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-2-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-email" placeholder="Enter loading-coordinator-2 email" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-2-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-Contact" placeholder="Enter loading-coordinator-2 Contact" value="">
+                                  </div>
+                                </div>
+
+                            </fieldset>
+
+
+
+                            <!-----------Plants----------->
+                            
+                            <div id="plants-field" style="display: none;" class="form-group row" onchange="changenoOfPlants()">
+                              <br><br>
+                              <label for="no-of-plants" class="col-sm-2 text-dark col-form-label">No. Of Plants</label>
+                              <div class="col-sm-10">
+                                <input type="number" min="1" class="form-control-plaintext custom-input" id="no-of-plants" placeholder="Enter Name Of Plant" value="" required>
+                              </div>
+                            </div>
+
+                          <fieldset id="plants-details" style="display:none;">
+                            <br><br>
+                              <legend class="blue-color" id="plants-num">Plant</legend>
+                              <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Plant Number</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="plants-number" readonly placeholder="Enter Number Of Plant" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="company" class="col-sm-3 text-dark col-form-label">Plants's Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="plants-name" placeholder="Enter Plant's Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-time" class="col-sm-3 text-dark col-form-label">Loading/Unloading Time</label>
+                                  <div class="col-sm-9">
+                                    <input type="time" class="form-control-plaintext custom-input" id="p-loading-time" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="avg-halt-time" class="col-sm-3 text-dark col-form-label">AVG HALT TIME</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="avg-halt-time" placeholder="Enter Avg Halt Time" value="" >
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-docking-facilities" class="col-sm-3 text-dark col-form-label">How many Docking facilities for loading are available?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-docking-facilities" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-vehicle-length" class="col-sm-3 text-dark col-form-label">What max length of vehicle can enter your PLANT?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-vehicle-plant" placeholder="Enter length of Plant" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-scope-parallel-loading" class="col-sm-3 text-dark col-form-label">Scope of parallel loading/ unloading? If yes then how many parallel loading docking yards are there?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-scope-parallel-loading" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="p-address" class="col-sm-3 text-dark col-form-label">Address/ Geo Cordinates</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-address" placeholder="Address" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="p-no-entry-timezone" class="col-sm-3 text-dark col-form-label">No Entry Time Zone of city</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-no-entry-timezone" placeholder="Enter Time Zone" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for=pc-scanning-inbound" class="col-sm-3 text-dark col-form-label">Scanning at Inbound?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-scanning-inbound" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="p-scanning-outbound" class="col-sm-3 text-dark col-form-label">Scanning at Outbound?</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-scanning-outbound" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="p-manager-name" class="col-sm-3 text-dark col-form-label">Manager Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-manager-name" placeholder="Enter Manager Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="p-manager-email" class="col-sm-3 text-dark col-form-label">Manager email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="p-manager-email" placeholder="Enter Manager email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-manager-Contact" class="col-sm-3 text-dark col-form-label">Manager Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="dc-manager-Contact" placeholder="Enter Manager Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-1-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-name" placeholder="Enter loading-coordinator-1 Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-1-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-email" placeholder="Enter loading-coordinator-1 email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-1-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-Contact" placeholder="Enter loading-coordinator-1 Contact" value="" required>
+                                  </div>
+                                </div>
+
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-2-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-name" placeholder="Enter loading-coordinator-2 Name" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-2-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-email" placeholder="Enter loading-coordinator-2 email" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="dc-loading-coordinator-2-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Contact</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-Contact" placeholder="Enter loading-coordinator-2 Contact" value="">
+                                  </div>
+                                </div>
+
+                            </fieldset>
+
+
+                            <!---------Drop Locations------->
+                            
+                            <div id="drop-field" style="display: none;" class="form-group row" onchange="changenoOfDropLocation()">
+                              <label for="no-of-drop-locations" class="col-sm-2 text-dark col-form-label">Drop Locations</label>
+                              <div class="col-sm-10">
+                                  <input type="number" min="1" class="form-control-plaintext custom-input" id="no-of-drop-location" placeholder="Enter Number Of Drop Locations" value="" required>
+                              </div>
+                            </div>
+      
+                          <fieldset id="drop-details" style="display:none;">
+                            <br><br>
+                              <legend class="blue-color" id="drop-num">Drop Locations</legend>
+                        
+                                <div class="form-group row">
+                                  <label for="drop-location-name" class="col-sm-3 text-dark col-form-label">Drop Location's Name</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-location-name" placeholder="Drop Location's Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-loading-time" class="col-sm-3 text-dark col-form-label">Loading/Unloading Time</label>
+                                  <div class="col-sm-9">
+                                      <input type="time" class="form-control-plaintext custom-input" id="drop-loading-time" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-avg-halt-time" class="col-sm-3 text-dark col-form-label">AVG HALT TIME</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-avg-halt-time" placeholder="Enter Avg Halt Time" value="" >
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-docking-facilities" class="col-sm-3 text-dark col-form-label">How many Docking facilities for loading are available?</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-docking-facilities" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-vehicle-length" class="col-sm-3 text-dark col-form-label">What max length of vehicle can enter your PLANT?</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-vehicle-plant" placeholder="Enter length of Plant" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-scope-parallel-loading" class="col-sm-3 text-dark col-form-label">Scope of parallel loading/ unloading? If yes then how many parallel loading docking yards are there?</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-scope-parallel-loading" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-address" class="col-sm-3 text-dark col-form-label">Address/ Geo Cordinates</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-address" placeholder="Address" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-no-entry-timezone" class="col-sm-3 text-dark col-form-label">No Entry Time Zone of city</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-no-entry-timezone" placeholder="Enter Time Zone" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for=drop-scanning-inbound" class="col-sm-3 text-dark col-form-label">Scanning at Inbound?</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-scanning-inbound" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-scanning-outbound" class="col-sm-3 text-dark col-form-label">Scanning at Outbound?</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-scanning-outbound" placeholder="" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-manager-name" class="col-sm-3 text-dark col-form-label">Manager Name</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-manager-name" placeholder="Enter Manager Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-manager-email" class="col-sm-3 text-dark col-form-label">Manager email</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-manager-email" placeholder="Enter Manager email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-manager-Contact" class="col-sm-3 text-dark col-form-label">Manager Contact</label>
+                                  <div class="col-sm-9">
+                                      <input type="number" class="form-control-plaintext custom-input" id="drop-manager-Contact" placeholder="Enter Manager Contact" value="" required>
+                                  </div>
+                                </div>
+      
+                                <div class="form-group row">
+                                  <label for="drop-loading-coordinator-1-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Name</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-loading-coordinator-1-name" placeholder="Enter loading-coordinator-1 Name" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-loading-coordinator-1-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 email</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-email" placeholder="Enter loading-coordinator-1 email" value="" required>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-loading-coordinator-1-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Contact</label>
+                                  <div class="col-sm-9">
+                                      <input type="number" class="form-control-plaintext custom-input" id="drop-loading-coordinator-1-Contact" placeholder="Enter loading-coordinator-1 Contact" value="" required>
+                                  </div>
+                                </div>
+      
+                                <div class="form-group row">
+                                  <label for="drop-loading-coordinator-2-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Name</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-loading-coordinator-2-name" placeholder="Enter loading-coordinator-2 Name" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-loading-coordinator-2-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 email</label>
+                                  <div class="col-sm-9">
+                                      <input type="text" class="form-control-plaintext custom-input" id="drop-loading-coordinator-2-email" placeholder="Enter loading-coordinator-2 email" value="">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="drop-loading-coordinator-2-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Contact</label>
+                                  <div class="col-sm-9">
+                                      <input type="number" class="form-control-plaintext custom-input" id="drop-loading-coordinator-2-Contact" placeholder="Enter loading-coordinator-2 Contact" value="">
+                                  </div>
+                                </div>
+      
+                            </fieldset>
+
+
+                      </form>
                   </div>
 
-                  <fieldset>
-                    <legend class="blue-color">Region Details</legend>
-                    <div class="form-group row">
-                        <label for="company" class="col-sm-2 text-dark col-form-label">Name Of Regions</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control-plaintext custom-input" id="name-of-region" placeholder="Enter Name Of Region" value="" required>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="company" class="col-sm-2 text-dark col-form-label">Region Head Name</label>
-                        <div class="col-sm-10">
-                           <input type="text" class="form-control-plaintext custom-input" id="region-head-name" placeholder="Enter Region Head Name" value="" required>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="company" class="col-sm-2 text-dark col-form-label">Contact Number</label>
-                        <div class="col-sm-10">
-                           <input type="number" class="form-control-plaintext custom-input" id="contact" placeholder="Enter Contact Number" value="" required>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="company" class="col-sm-2 text-dark col-form-label">Email</label>
-                        <div class="col-sm-10">
-                           <input type="email" class="form-control-plaintext custom-input" id="email" placeholder="Enter Email Id" value="" required>
-                        </div>
-                      </div>
-                  </fieldset>
+                  <br><br>
+                  <center>
+                    <button class="btn-large  btn" style="width:fit-content;" type="submit" name="action"><h5>Submit Details</h5></button></center>
                   <br>
-                    <center><button class="btn btn-primary">Continue</button></center>
-                </form>
-            </div><!--card-body-->
-        </div><!--card-->
-
-            <!-----------------------card 2----------------------->
-        <div class="card" id="card-2" style="background-color:white; display:noneg;">
-            <div class="card-header">
-                <center><h4>Warehouse Details</h4></center>
-            </div>
-            <div class="card-body py-5 px-4">
-                <form>
-                    <div class="form-group row">
-                        <label for="company" class="col-sm-2 text-dark col-form-label">Select Region No.</label>
-                        <div class="col-sm-10">
-                           <select class="form-control custom-select" id="select-region-no">
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row" onchange="changenoOfWarehouses()">
-                        <label for="company" class="col-sm-2 text-dark col-form-label">No. Of Warehouse</label>
-                        <div class="col-sm-10">
-                           <input type="number" min="1" class="form-control-plaintext custom-input" id="no-of-warehouse" placeholder="Enter Name Of Region" value="" required>
-                        </div>
-                      </div>
-
-                    <fieldset id="warehouse-details" style="display:none;">
-                      <br><br>
-                        <legend class="blue-color" id="warehouse-num">Warehouse</legend>
-                        <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Warehouse Number</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="warehouse-number" readonly placeholder="Enter Name Of Region" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Warehouse Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="warehouse-name" placeholder="Enter Warehouse Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Loading/Unloading Time</label>
-                            <div class="col-sm-9">
-                               <input type="time" class="form-control-plaintext custom-input" id="w-loading-time" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Off Days in month?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-off-days" placeholder="Enter No. Of Off Days" value="" >
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">How many Docking facilities for loading are available?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-docking-facilities" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">What max length of vehicle can enter your warehouse?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-vehicle-length" placeholder="Enter length of vehicle" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Scope of parallel loading/ unloading? If yes then how many parallel loading docking yards are there?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-scope-parallel-loading" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Address/ Geo Cordinates</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-address" placeholder="Address" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">No Entry Time Zone of city</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-no-entry-timezone" placeholder="Enter Time Zone" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Scanning at Inbound?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-scanning-inbound" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-scanning-outbound" class="col-sm-3 text-dark col-form-label">Scanning at Outbound?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-scanning-outbound" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-manager-name" class="col-sm-3 text-dark col-form-label">Manager Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-manager-name" placeholder="Enter Manager Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-manager-email" class="col-sm-3 text-dark col-form-label">Manager email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-manager-email" placeholder="Enter Manager email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-manager-Contact" class="col-sm-3 text-dark col-form-label">Manager Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="w-manager-Contact" placeholder="Enter Manager Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="w-supervisor-1-name" class="col-sm-3 text-dark col-form-label">Supervisor 1 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-supervisor-1-name" placeholder="Enter supervisor-1 Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-supervisor-1-email" class="col-sm-3 text-dark col-form-label">Supervisor 1 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-supervisor-1-email" placeholder="Enter supervisor-1 email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-supervisor-1-Contact" class="col-sm-3 text-dark col-form-label">Supervisor 1 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="w-supervisor-1-Contact" placeholder="Enter supervisor-1 Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="w-supervisor-2-name" class="col-sm-3 text-dark col-form-label">Supervisor 2 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-supervisor-2-name" placeholder="Enter supervisor-2 Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-supervisor-2-email" class="col-sm-3 text-dark col-form-label">Supervisor 2 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-supervisor-2-email" placeholder="Enter supervisor-2 email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-supervisor-2-Contact" class="col-sm-3 text-dark col-form-label">Supervisor 2 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="w-supervisor-2-Contact" placeholder="Enter supervisor-2 Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="w-loading-coordinator-1-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-loading-coordinator-1-name" placeholder="Enter loading-coordinator-1 Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-loading-coordinator-1-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-loading-coordinator-1-email" placeholder="Enter loading-coordinator-1 email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-loading-coordinator-1-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="w-loading-coordinator-1-Contact" placeholder="Enter loading-coordinator-1 Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="w-loading-coordinator-2-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-loading-coordinator-2-name" placeholder="Enter loading-coordinator-2 Name" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-loading-coordinator-2-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="w-loading-coordinator-2-email" placeholder="Enter loading-coordinator-2 email" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="w-loading-coordinator-2-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="w-loading-coordinator-2-Contact" placeholder="Enter loading-coordinator-2 Contact" value="">
-                            </div>
-                          </div>
-
-                      </fieldset>
-
-
-
-                      <!-----------DC----------->
-                     
-                      <div id="dc-field" style="display: none;" class="mt-5 form-group row" onkeyup="changenoOfDC()">
-                        <label for="company" class="col-sm-2 text-dark col-form-label">No. Of DCs</label>
-                        <div class="col-sm-10">
-                           <input type="number" min="1" class="form-control-plaintext custom-input" id="no-of-dc" placeholder="Enter Name Of Region" value="" required>
-                        </div>
-                      </div>
-
-                    <fieldset id="dc-details" style="display:none;">
-                      <br><br>
-                        <legend class="blue-color" id="dc-num">DC's</legend>
-                        <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">DC Number</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-number" readonly placeholder="Enter Name Of Region" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">DC's Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-name" placeholder="Enter DC's Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-time" class="col-sm-3 text-dark col-form-label">Loading/Unloading Time</label>
-                            <div class="col-sm-9">
-                               <input type="time" class="form-control-plaintext custom-input" id="dc-loading-time" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-off-days" class="col-sm-3 text-dark col-form-label">Off Days in month?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-off-days" placeholder="Enter No. Of Off Days" value="" >
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-docking-facilities" class="col-sm-3 text-dark col-form-label">How many Docking facilities for loading are available?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-docking-facilities" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-vehicle-length" class="col-sm-3 text-dark col-form-label">What max length of vehicle can enter your warehouse?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-vehicle-length" placeholder="Enter length of vehicle" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-scope-parallel-loading" class="col-sm-3 text-dark col-form-label">Scope of parallel loading/ unloading? If yes then how many parallel loading docking yards are there?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-scope-parallel-loading" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-address" class="col-sm-3 text-dark col-form-label">Address/ Geo Cordinates</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-address" placeholder="Address" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-no-entry-timezone" class="col-sm-3 text-dark col-form-label">No Entry Time Zone of city</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-no-entry-timezone" placeholder="Enter Time Zone" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-scanning-inbound" class="col-sm-3 text-dark col-form-label">Scanning at Inbound?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-scanning-inbound" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-scanning-outbound" class="col-sm-3 text-dark col-form-label">Scanning at Outbound?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-scanning-outbound" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-manager-name" class="col-sm-3 text-dark col-form-label">Manager Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-manager-name" placeholder="Enter Manager Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-manager-email" class="col-sm-3 text-dark col-form-label">Manager email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-manager-email" placeholder="Enter Manager email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-manager-Contact" class="col-sm-3 text-dark col-form-label">Manager Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="dc-manager-Contact" placeholder="Enter Manager Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="dc-supervisor-1-name" class="col-sm-3 text-dark col-form-label">Supervisor 1 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-supervisor-1-name" placeholder="Enter supervisor-1 Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-supervisor-1-email" class="col-sm-3 text-dark col-form-label">Supervisor 1 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-supervisor-1-email" placeholder="Enter supervisor-1 email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-supervisor-1-Contact" class="col-sm-3 text-dark col-form-label">Supervisor 1 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="dc-supervisor-1-Contact" placeholder="Enter supervisor-1 Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="dc-supervisor-2-name" class="col-sm-3 text-dark col-form-label">Supervisor 2 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-supervisor-2-name" placeholder="Enter supervisor-2 Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-supervisor-2-email" class="col-sm-3 text-dark col-form-label">Supervisor 2 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-supervisor-2-email" placeholder="Enter supervisor-2 email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-supervisor-2-Contact" class="col-sm-3 text-dark col-form-label">Supervisor 2 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="dc-supervisor-2-Contact" placeholder="Enter supervisor-2 Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-1-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-name" placeholder="Enter loading-coordinator-1 Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-1-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-email" placeholder="Enter loading-coordinator-1 email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-1-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-Contact" placeholder="Enter loading-coordinator-1 Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-2-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-name" placeholder="Enter loading-coordinator-2 Name" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-2-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-email" placeholder="Enter loading-coordinator-2 email" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-2-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-Contact" placeholder="Enter loading-coordinator-2 Contact" value="">
-                            </div>
-                          </div>
-
-                      </fieldset>
-
-
-
-                      <!-----------Plants----------->
-                      
-                      <div id="plants-field" style="display: none;" class="form-group row" onchange="changenoOfPlants()">
-                        <br><br>
-                        <label for="no-of-plants" class="col-sm-2 text-dark col-form-label">No. Of Plants</label>
-                        <div class="col-sm-10">
-                           <input type="number" min="1" class="form-control-plaintext custom-input" id="no-of-plants" placeholder="Enter Name Of Plant" value="" required>
-                        </div>
-                      </div>
-
-                    <fieldset id="plants-details" style="display:none;">
-                      <br><br>
-                        <legend class="blue-color" id="plants-num">Plant</legend>
-                        <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Plant Number</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="plants-number" readonly placeholder="Enter Number Of Plant" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="company" class="col-sm-3 text-dark col-form-label">Plants's Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="plants-name" placeholder="Enter Plant's Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-time" class="col-sm-3 text-dark col-form-label">Loading/Unloading Time</label>
-                            <div class="col-sm-9">
-                               <input type="time" class="form-control-plaintext custom-input" id="p-loading-time" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="avg-halt-time" class="col-sm-3 text-dark col-form-label">AVG HALT TIME</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="avg-halt-time" placeholder="Enter Avg Halt Time" value="" >
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-docking-facilities" class="col-sm-3 text-dark col-form-label">How many Docking facilities for loading are available?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-docking-facilities" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-vehicle-length" class="col-sm-3 text-dark col-form-label">What max length of vehicle can enter your PLANT?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-vehicle-plant" placeholder="Enter length of Plant" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-scope-parallel-loading" class="col-sm-3 text-dark col-form-label">Scope of parallel loading/ unloading? If yes then how many parallel loading docking yards are there?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-scope-parallel-loading" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="p-address" class="col-sm-3 text-dark col-form-label">Address/ Geo Cordinates</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-address" placeholder="Address" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="p-no-entry-timezone" class="col-sm-3 text-dark col-form-label">No Entry Time Zone of city</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-no-entry-timezone" placeholder="Enter Time Zone" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for=pc-scanning-inbound" class="col-sm-3 text-dark col-form-label">Scanning at Inbound?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-scanning-inbound" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="p-scanning-outbound" class="col-sm-3 text-dark col-form-label">Scanning at Outbound?</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-scanning-outbound" placeholder="" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="p-manager-name" class="col-sm-3 text-dark col-form-label">Manager Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-manager-name" placeholder="Enter Manager Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="p-manager-email" class="col-sm-3 text-dark col-form-label">Manager email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="p-manager-email" placeholder="Enter Manager email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-manager-Contact" class="col-sm-3 text-dark col-form-label">Manager Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="dc-manager-Contact" placeholder="Enter Manager Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-1-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-name" placeholder="Enter loading-coordinator-1 Name" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-1-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-email" placeholder="Enter loading-coordinator-1 email" value="" required>
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-1-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-Contact" placeholder="Enter loading-coordinator-1 Contact" value="" required>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-2-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Name</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-name" placeholder="Enter loading-coordinator-2 Name" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-2-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 email</label>
-                            <div class="col-sm-9">
-                               <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-email" placeholder="Enter loading-coordinator-2 email" value="">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label for="dc-loading-coordinator-2-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Contact</label>
-                            <div class="col-sm-9">
-                               <input type="number" class="form-control-plaintext custom-input" id="dc-loading-coordinator-2-Contact" placeholder="Enter loading-coordinator-2 Contact" value="">
-                            </div>
-                          </div>
-
-                      </fieldset>
-
-
-                      <!---------Drop Locations------->
-                       
-                       <div id="drop-field" style="display: none;" class="form-group row" onchange="changenoOfDropLocation()">
-                         <label for="no-of-drop-locations" class="col-sm-2 text-dark col-form-label">Drop Locations</label>
-                         <div class="col-sm-10">
-                            <input type="number" min="1" class="form-control-plaintext custom-input" id="no-of-drop-location" placeholder="Enter Number Of Drop Locations" value="" required>
-                         </div>
-                       </div>
- 
-                     <fieldset id="drop-details" style="display:none;">
-                      <br><br>
-                         <legend class="blue-color" id="drop-num">Drop Locations</legend>
-                  
-                           <div class="form-group row">
-                             <label for="drop-location-name" class="col-sm-3 text-dark col-form-label">Drop Location's Name</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-location-name" placeholder="Drop Location's Name" value="" required>
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-loading-time" class="col-sm-3 text-dark col-form-label">Loading/Unloading Time</label>
-                             <div class="col-sm-9">
-                                <input type="time" class="form-control-plaintext custom-input" id="drop-loading-time" placeholder="" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-avg-halt-time" class="col-sm-3 text-dark col-form-label">AVG HALT TIME</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-avg-halt-time" placeholder="Enter Avg Halt Time" value="" >
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-docking-facilities" class="col-sm-3 text-dark col-form-label">How many Docking facilities for loading are available?</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-docking-facilities" placeholder="" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-vehicle-length" class="col-sm-3 text-dark col-form-label">What max length of vehicle can enter your PLANT?</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-vehicle-plant" placeholder="Enter length of Plant" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-scope-parallel-loading" class="col-sm-3 text-dark col-form-label">Scope of parallel loading/ unloading? If yes then how many parallel loading docking yards are there?</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-scope-parallel-loading" placeholder="" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-address" class="col-sm-3 text-dark col-form-label">Address/ Geo Cordinates</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-address" placeholder="Address" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-no-entry-timezone" class="col-sm-3 text-dark col-form-label">No Entry Time Zone of city</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-no-entry-timezone" placeholder="Enter Time Zone" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for=drop-scanning-inbound" class="col-sm-3 text-dark col-form-label">Scanning at Inbound?</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-scanning-inbound" placeholder="" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-scanning-outbound" class="col-sm-3 text-dark col-form-label">Scanning at Outbound?</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-scanning-outbound" placeholder="" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-manager-name" class="col-sm-3 text-dark col-form-label">Manager Name</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-manager-name" placeholder="Enter Manager Name" value="" required>
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-manager-email" class="col-sm-3 text-dark col-form-label">Manager email</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-manager-email" placeholder="Enter Manager email" value="" required>
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-manager-Contact" class="col-sm-3 text-dark col-form-label">Manager Contact</label>
-                             <div class="col-sm-9">
-                                <input type="number" class="form-control-plaintext custom-input" id="drop-manager-Contact" placeholder="Enter Manager Contact" value="" required>
-                             </div>
-                           </div>
- 
-                           <div class="form-group row">
-                             <label for="drop-loading-coordinator-1-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Name</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-loading-coordinator-1-name" placeholder="Enter loading-coordinator-1 Name" value="" required>
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-loading-coordinator-1-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 email</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="dc-loading-coordinator-1-email" placeholder="Enter loading-coordinator-1 email" value="" required>
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-loading-coordinator-1-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 1 Contact</label>
-                             <div class="col-sm-9">
-                                <input type="number" class="form-control-plaintext custom-input" id="drop-loading-coordinator-1-Contact" placeholder="Enter loading-coordinator-1 Contact" value="" required>
-                             </div>
-                           </div>
- 
-                           <div class="form-group row">
-                             <label for="drop-loading-coordinator-2-name" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Name</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-loading-coordinator-2-name" placeholder="Enter loading-coordinator-2 Name" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-loading-coordinator-2-email" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 email</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control-plaintext custom-input" id="drop-loading-coordinator-2-email" placeholder="Enter loading-coordinator-2 email" value="">
-                             </div>
-                           </div>
-                           <div class="form-group row">
-                             <label for="drop-loading-coordinator-2-Contact" class="col-sm-3 text-dark col-form-label">Loading Coordinator 2 Contact</label>
-                             <div class="col-sm-9">
-                                <input type="number" class="form-control-plaintext custom-input" id="drop-loading-coordinator-2-Contact" placeholder="Enter loading-coordinator-2 Contact" value="">
-                             </div>
-                           </div>
- 
-                       </fieldset>
-
-
-                </form>
-            </div>
-
-            <br><br>
-            <center>
-              <button class="btn-large" style="width:fit-content;" type="submit" name="action">Submit
-            </button></center>
-            <br>
-    
-        </div> <!--card-2 ends-->
-    </div>
-    <!--container-->
+          
+              </div> <!--card-2 ends-->
+          </div>
+          <!--container-->
+      </div><!--col-s9-->
+   </div><!--row--> 
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
    <script  src="https://code.jquery.com/jquery-3.5.1.js"  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
