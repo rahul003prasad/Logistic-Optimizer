@@ -11,7 +11,7 @@
 9-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:5:5-25:19
+11-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:5:5-26:19
 12        android:allowBackup="true"
 12-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,33 +28,36 @@
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
 20-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:11:9-40
-21        <activity android:name="com.rahulprasad.infinityhaul.Home" />
-21-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:12:9-79
-21-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:12:19-67
-22        <activity android:name="com.rahulprasad.infinityhaul.MainActivity" />
-22-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:13:9-78
-22-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:13:19-75
-23        <activity android:name="com.rahulprasad.infinityhaul.OnBoarding" >
-23-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:14:9-20:20
-23-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:14:19-73
-24            <intent-filter>
-24-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:15:13-19:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:16:17-69
-25-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:16:25-66
-26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:18:17-77
-27-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:18:27-74
-28            </intent-filter>
-29        </activity>
-30
-31        <meta-data
-31-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:22:9-24:57
-32            android:name="preloaded_fonts"
-32-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:23:13-43
-33            android:resource="@array/preloaded_fonts" />
-33-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:24:13-54
-34    </application>
-35
-36</manifest>
+21        <activity android:name="com.rahulprasad.infinityhaul.OnBoarding" />
+21-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:12:9-57
+21-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:12:19-45
+22        <activity android:name="com.rahulprasad.infinityhaul.Home" />
+22-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:13:9-42
+22-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:13:19-39
+23        <activity android:name="com.rahulprasad.infinityhaul.MainActivity" />
+23-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:14:9-50
+23-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:14:19-47
+24        <activity android:name="com.rahulprasad.infinityhaul.Splash" >
+24-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:15:9-21:20
+24-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:15:19-41
+25            <intent-filter>
+25-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:16:13-20:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:17:17-69
+26-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:17:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:19:17-77
+28-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:19:27-74
+29            </intent-filter>
+30        </activity>
+31
+32        <meta-data
+32-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:23:9-25:57
+33            android:name="preloaded_fonts"
+33-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:24:13-43
+34            android:resource="@array/preloaded_fonts" />
+34-->/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:25:13-54
+35    </application>
+36
+37</manifest>

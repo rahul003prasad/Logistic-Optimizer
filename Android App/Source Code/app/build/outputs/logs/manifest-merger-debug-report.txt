@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
 MERGED from [com.google.android.material:material:1.1.0] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/ae67d481176994a76afa6f312b4e8a78/material-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/ef8a364a6a39421e69c96cf68eeb3e63/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/380cbbd0623e9b22e21961fc6ec82b14/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
@@ -31,25 +31,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rahulprasad/.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/9c0d2720907bb8bd5d5976efee735314/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/d00c90699ae27cc1e1ce5e4b3e530617/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/13ac386f95e101744ae5f7d486caaa8c/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:3:5-43
 		INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
 		INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-27:12
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:1-28:12
 		INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:5:5-25:19
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:5:5-26:19
 MERGED from [com.google.android.material:material:1.1.0] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/ae67d481176994a76afa6f312b4e8a78/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/ae67d481176994a76afa6f312b4e8a78/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/rahulprasad/.gradle/caches/transforms-2/files-2.1/380cbbd0623e9b22e21961fc6ec82b14/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -72,34 +72,38 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/rahu
 		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:11:9-40
-activity#com.rahulprasad.infinityhaul.Home
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:12:9-79
-	android:name
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:12:19-67
-activity#com.rahulprasad.infinityhaul.MainActivity
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:13:9-78
-	android:name
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:13:19-75
 activity#com.rahulprasad.infinityhaul.OnBoarding
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:14:9-20:20
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:12:9-57
 	android:name
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:14:19-73
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:12:19-45
+activity#com.rahulprasad.infinityhaul.Home
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:13:9-42
+	android:name
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:13:19-39
+activity#com.rahulprasad.infinityhaul.MainActivity
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:14:9-50
+	android:name
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:14:19-47
+activity#com.rahulprasad.infinityhaul.Splash
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:15:9-21:20
+	android:name
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:15:19-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:15:13-19:29
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:16:17-69
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:16:25-66
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:18:17-77
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:18:27-74
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:19:27-74
 meta-data#preloaded_fonts
-ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:22:9-24:57
+ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:23:9-25:57
 	android:resource
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:24:13-54
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:25:13-54
 	android:name
-		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:23:13-43
+		ADDED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml:24:13-43
 uses-sdk
 INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/AndroidManifest.xml

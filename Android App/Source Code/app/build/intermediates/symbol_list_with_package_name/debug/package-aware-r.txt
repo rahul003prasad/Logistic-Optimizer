@@ -1360,6 +1360,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable indicator_selector
+drawable logo
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1534,6 +1535,7 @@ id icon_group
 id ifRoom
 id image
 id imageView
+id imageView2
 id info
 id invisible
 id italic
@@ -1756,6 +1758,7 @@ layout abc_tooltip
 layout activity_home
 layout activity_main
 layout activity_on_boarding
+layout activity_splash
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

@@ -12,6 +12,10 @@
         "source": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/res/drawable/two.png"
     },
     {
+        "merged": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/build/intermediates/res/merged/debug/layout_activity_splash.xml.flat",
+        "source": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
         "merged": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
@@ -102,6 +106,10 @@
     {
         "merged": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/build/intermediates/res/merged/debug/drawable_logo.png.flat",
+        "source": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/src/main/res/drawable/logo.png"
     },
     {
         "merged": "/Users/rahulprasad/Desktop/Work/Infinity/Logistics-Optimizer/Android App/Source Code/app/build/intermediates/res/merged/debug/drawable_three.png.flat",
